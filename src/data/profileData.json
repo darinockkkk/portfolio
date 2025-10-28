@@ -1,0 +1,68 @@
+{
+  "name": "Daryna Darii",
+  "title": "Software Developer & Product Analyst",
+  "tagline": "Building intelligent, user-focused digital products.",
+  "email": "daryna@example.com",
+  "location": "Toronto, Canada",
+  "about": "I'm a developer passionate about creating products that combine AI, design, and business logic. With experience in startups, SaaS, and mobile apps, I bring both technical execution and product strategy to every project.",
+  "social": {
+    "linkedin": "https://linkedin.com/in/daryna-darii",
+    "github": "https://github.com/daryna-darii",
+    "email": "daryna@example.com"
+  },
+  "experience": [
+    {
+      "role": "Software Developer Intern",
+      "company": "Kilona",
+      "period": "2025",
+      "tech": ["React Native", "TypeScript", "Node.js", "Firebase"],
+      "description": "Developed mobile applications using React Native, implemented real-time features with Firebase, and collaborated with cross-functional teams to deliver user-centric solutions."
+    },
+    {
+      "role": "Co-Founder & CTO",
+      "company": "HODIMO",
+      "period": "2023 – 2025",
+      "tech": ["React Native", "AWS", "Python", "PostgreSQL"],
+      "description": "Led technical strategy and product development for a SaaS platform. Built scalable architecture, managed development team, and drove product-market fit through data-driven iterations."
+    },
+    {
+      "role": "Product Analyst",
+      "company": "Partnerway (Spendbase)",
+      "period": "2022 – 2024",
+      "tech": ["SQL", "Python", "Tableau", "Figma"],
+      "description": "Analyzed user behavior and product metrics to drive feature development. Created dashboards, conducted A/B tests, and collaborated with engineering teams to optimize product performance."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Yeego",
+      "description": "AI-powered networking platform that connects professionals based on interests and goals using intelligent matching algorithms.",
+      "tech": ["React Native", "OpenAI API", "Node.js", "Firebase"],
+      "image": "/projects/yeego.png",
+      "link": "#"
+    },
+    {
+      "name": "OutWithStrangers",
+      "description": "Django-based social application that facilitates meaningful connections through organized group activities and events.",
+      "tech": ["Django", "Python", "PostgreSQL", "Bootstrap"],
+      "image": "/projects/ows.png",
+      "link": "#"
+    },
+    {
+      "name": "FinanceBro",
+      "description": "Personal finance tracker built with JavaFX featuring budget management, expense tracking, and financial insights visualization.",
+      "tech": ["JavaFX", "Java", "MySQL", "CSS"],
+      "image": "/projects/financebro.png",
+      "link": "#"
+    }
+  ],
+  "skills": {
+    "languages": ["JavaScript/TypeScript", "Python", "Java", "SQL", "C"],
+    "frameworks": ["React Native", "Node.js", "Django", "Expo", "Next.js"],
+    "databases": ["Firebase", "PostgreSQL", "MySQL", "MongoDB"],
+    "cloud": ["AWS", "GCP", "Azure"],
+    "tools": ["Figma", "Git", "Docker", "CI/CD"],
+    "ai": ["Scikit-learn", "OpenAI API", "TensorFlow", "ML Pipelines"]
+  }
+}
+
