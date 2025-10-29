@@ -50,13 +50,13 @@ export default function AIAvatar({ onOpenChat }) {
       {/* AI Avatar Card */}
       <motion.button
         onClick={onOpenChat}
-        className="group relative w-full bg-gradient-to-br from-purple-900/40 to-teal-900/40 backdrop-blur-xl rounded-3xl p-14 border-2 border-purple-500/20 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer"
+        className="group relative w-full bg-gradient-to-br from-pink-900/40 to-lime-900/40 backdrop-blur-xl rounded-3xl p-14 border-2 border-pink-500/20 hover:border-pink-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-pink-500/20 cursor-pointer"
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.98 }}
       >
         {/* Pulsing Glow Effect */}
         <motion.div
-          className="absolute -inset-2 bg-gradient-to-br from-purple-500/10 to-teal-500/10 rounded-3xl blur-2xl"
+          className="absolute -inset-2 bg-gradient-to-br from-pink-500/10 to-lime-500/10 rounded-3xl blur-2xl"
           animate={{
             opacity: [0.3, 0.6, 0.3],
             scale: [0.98, 1.02, 0.98],
@@ -74,7 +74,7 @@ export default function AIAvatar({ onOpenChat }) {
           <div className="relative w-36 h-36 mb-6">
             {/* Animated Ring */}
             <motion.div
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-teal-500 opacity-40"
+              className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 to-lime-500 opacity-40"
               animate={{
                 scale: [1, 1.15, 1],
                 opacity: [0.4, 0.7, 0.4],
@@ -87,7 +87,7 @@ export default function AIAvatar({ onOpenChat }) {
             />
 
             {/* Avatar Circle */}
-            <div className="absolute inset-3 rounded-full bg-gradient-to-br from-purple-400 to-teal-400 p-[3px]">
+            <div className="absolute inset-3 rounded-full bg-gradient-to-br from-pink-400 to-lime-400 p-[3px]">
               <div className="w-full h-full rounded-full bg-zinc-900 flex items-center justify-center overflow-hidden">
                 {/* AI Avatar - Blonde Girl with Green Eyes */}
                 <div className="relative w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-800 to-zinc-900">
@@ -142,7 +142,7 @@ export default function AIAvatar({ onOpenChat }) {
           </div>
 
           {/* Text */}
-          <h3 className="text-2xl font-bold text-white mb-2 group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-teal-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+          <h3 className="text-2xl font-bold text-white mb-2 group-hover:bg-gradient-to-r group-hover:from-pink-400 group-hover:to-lime-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
             Chat with my AI Twin
           </h3>
           <p className="text-sm text-zinc-400 text-center mb-6 font-medium">
@@ -150,7 +150,7 @@ export default function AIAvatar({ onOpenChat }) {
           </p>
 
           {/* CTA Button */}
-          <div className="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-500 to-teal-500 text-white rounded-full text-base font-semibold group-hover:shadow-xl group-hover:shadow-purple-500/50 transition-all duration-300 group-hover:scale-105">
+          <div className="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-pink-500 to-lime-500 text-white rounded-full text-base font-semibold group-hover:shadow-xl group-hover:shadow-pink-500/50 transition-all duration-300 group-hover:scale-105">
             <MessageCircle size={18} />
             <span>Start Chatting</span>
           </div>
@@ -176,7 +176,7 @@ export default function AIAvatar({ onOpenChat }) {
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1.5 h-1.5 bg-purple-400/30 rounded-full blur-[1px]"
+            className="absolute w-1.5 h-1.5 bg-pink-400/30 rounded-full blur-[1px]"
             style={{
               left: `${15 + i * 14}%`,
               top: `${15 + (i % 3) * 25}%`,

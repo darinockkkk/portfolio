@@ -52,18 +52,18 @@ export default function Contact() {
       name: "GitHub",
       icon: <Github className="w-6 h-6" />,
       url: profileData.social.github,
-      color: "hover:text-purple-400",
+      color: "hover:text-pink-400",
     },
     {
       name: "Email",
       icon: <Mail className="w-6 h-6" />,
       url: `mailto:${profileData.social.email}`,
-      color: "hover:text-teal-400",
+      color: "hover:text-lime-400",
     },
   ];
 
   return (
-    <section id="contact" className="py-32 relative">
+    <section id="contact" className="py-12 relative">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-20 xl:px-24" ref={ref}>
         {/* Section Title */}
         <motion.div
@@ -72,10 +72,10 @@ export default function Contact() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Let's Connect
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-teal-500 mx-auto rounded-full mb-4" />
+          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-2 mb-4" />
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
             Have a project in mind or want to chat? I'd love to hear from you!
           </p>
@@ -107,7 +107,7 @@ export default function Contact() {
                   value={formState.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-xl text-zinc-100 placeholder-zinc-500 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all"
+                  className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-xl text-zinc-100 placeholder-zinc-500 focus:border-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-500/20 transition-all"
                   placeholder="John Doe"
                 />
               </div>
@@ -127,7 +127,7 @@ export default function Contact() {
                   value={formState.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-xl text-zinc-100 placeholder-zinc-500 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all"
+                  className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-xl text-zinc-100 placeholder-zinc-500 focus:border-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-500/20 transition-all"
                   placeholder="john@example.com"
                 />
               </div>
@@ -159,7 +159,7 @@ export default function Contact() {
                 className={`w-full py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 ${
                   isSubmitted
                     ? "bg-green-500 text-white"
-                    : "bg-gradient-to-r from-purple-500 to-teal-500 text-white hover:shadow-lg hover:shadow-purple-500/50 hover:scale-[1.02]"
+                    : "bg-gradient-to-r from-pink-500 to-lime-500 text-white hover:shadow-lg hover:shadow-pink-500/50 hover:scale-[1.02]"
                 } disabled:opacity-70 disabled:cursor-not-allowed`}
               >
                 {isSubmitted ? (
@@ -201,10 +201,10 @@ export default function Contact() {
 
               {/* Email */}
               <div className="flex items-center gap-3 text-zinc-300 mb-4">
-                <Mail className="w-5 h-5 text-purple-400" />
+                <Mail className="w-5 h-5 text-pink-400" />
                 <a
                   href={`mailto:${profileData.email}`}
-                  className="hover:text-purple-400 transition-colors"
+                  className="hover:text-pink-400 transition-colors"
                 >
                   {profileData.email}
                 </a>
@@ -225,7 +225,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`p-4 bg-zinc-800/50 rounded-xl border border-zinc-700 text-zinc-400 ${social.color} transition-all duration-300 hover:border-purple-500/50`}
+                    className={`p-4 bg-zinc-800/50 rounded-xl border border-zinc-700 text-zinc-400 ${social.color} transition-all duration-300 hover:border-pink-500/50`}
                   >
                     {social.icon}
                   </motion.a>

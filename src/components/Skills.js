@@ -15,13 +15,13 @@ export default function Skills() {
       title: "Languages",
       icon: <Code className="w-6 h-6" />,
       skills: profileData.skills.languages,
-      color: "from-purple-500 to-pink-500",
+      color: "from-pink-500 to-pink-500",
     },
     {
       title: "Frameworks",
       icon: <Code className="w-6 h-6" />,
       skills: profileData.skills.frameworks,
-      color: "from-teal-500 to-cyan-500",
+      color: "from-lime-500 to-cyan-500",
     },
     {
       title: "Databases",
@@ -45,12 +45,12 @@ export default function Skills() {
       title: "AI & ML",
       icon: <Brain className="w-6 h-6" />,
       skills: profileData.skills.ai,
-      color: "from-violet-500 to-purple-500",
+      color: "from-violet-500 to-pink-500",
     },
   ];
 
   return (
-    <section id="skills" className="py-32 relative">
+    <section id="skills" className="py-12 relative">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-20 xl:px-24" ref={ref}>
         {/* Section Title */}
         <motion.div
@@ -59,10 +59,10 @@ export default function Skills() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Skills & Technologies
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-teal-500 mx-auto rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-2" />
         </motion.div>
 
         {/* Skills Grid */}
@@ -73,10 +73,10 @@ export default function Skills() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-zinc-900/50 backdrop-blur-xl rounded-2xl p-6 border border-zinc-800 hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
+              className="group relative bg-zinc-900/50 backdrop-blur-xl rounded-2xl p-6 border border-zinc-800 hover:border-pink-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/10"
             >
               {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-teal-500/0 group-hover:from-purple-500/5 group-hover:to-teal-500/5 rounded-2xl transition-all duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/0 to-lime-500/0 group-hover:from-pink-500/5 group-hover:to-lime-500/5 rounded-2xl transition-all duration-300" />
 
               <div className="relative z-10">
                 {/* Category Header */}
@@ -102,7 +102,7 @@ export default function Skills() {
                         duration: 0.3,
                         delay: index * 0.1 + skillIndex * 0.05,
                       }}
-                      className="px-5 py-2.5 text-sm font-medium bg-zinc-800/70 text-zinc-300 rounded-lg border border-zinc-700 hover:border-purple-500/50 hover:text-purple-300 transition-all duration-200"
+                      className="px-2.5 py-1 text-xs font-medium bg-zinc-800/70 text-zinc-300 rounded-full border border-zinc-700 hover:border-pink-500/50 hover:text-pink-300 transition-all duration-200"
                     >
                       {skill}
                     </motion.span>

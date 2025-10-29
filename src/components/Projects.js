@@ -11,7 +11,7 @@ export default function Projects() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" className="py-32 relative">
+    <section id="projects" className="py-12 relative">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-20 xl:px-24" ref={ref}>
         {/* Section Title */}
         <motion.div
@@ -20,10 +20,10 @@ export default function Projects() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Featured Projects
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-teal-500 mx-auto rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-2" />
         </motion.div>
 
         {/* Projects Grid */}
@@ -34,10 +34,10 @@ export default function Projects() {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative bg-zinc-900/50 backdrop-blur-xl rounded-2xl overflow-hidden border border-zinc-800 hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
+              className="group relative bg-zinc-900/50 backdrop-blur-xl rounded-2xl overflow-hidden border border-zinc-800 hover:border-pink-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/10"
             >
               {/* Project Image */}
-              <div className="relative h-48 bg-gradient-to-br from-purple-500/20 to-teal-500/20 overflow-hidden">
+              <div className="relative h-48 bg-gradient-to-br from-pink-500/20 to-lime-500/20 overflow-hidden">
                 {/* Placeholder for project image */}
                 <div className="w-full h-full flex items-center justify-center text-6xl">
                   {index === 0 ? "🤝" : index === 1 ? "🎉" : "💰"}
@@ -62,7 +62,7 @@ export default function Projects() {
 
               {/* Project Info */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-zinc-100 mb-3 group-hover:text-purple-400 transition-colors">
+                <h3 className="text-xl font-bold text-zinc-100 mb-3 group-hover:text-pink-400 transition-colors">
                   {project.name}
                 </h3>
                 
@@ -75,7 +75,7 @@ export default function Projects() {
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-5 py-2.5 text-xs font-medium bg-zinc-800/50 text-teal-300 rounded-lg border border-zinc-700"
+                      className="px-2.5 py-1 text-xs font-medium bg-zinc-800/50 text-lime-300 rounded-full border border-zinc-700"
                     >
                       {tech}
                     </span>
@@ -85,7 +85,7 @@ export default function Projects() {
 
               {/* Animated Border Effect */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-teal-500/20" />
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-lime-500/20" />
               </div>
             </motion.div>
           ))}

@@ -29,7 +29,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-32 relative">
+    <section id="about" className="py-12 relative">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-20 xl:px-24" ref={ref}>
         {/* Section Title */}
         <motion.div
@@ -38,10 +38,10 @@ export default function About() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             About Me
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-teal-500 mx-auto rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-2" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -54,12 +54,12 @@ export default function About() {
           >
             <div className="relative w-full aspect-square max-w-md mx-auto">
               {/* Glowing Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-teal-500/20 rounded-3xl blur-3xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-lime-500/20 rounded-3xl blur-3xl" />
               
               {/* Avatar Card */}
               <div className="relative w-full h-full bg-zinc-900/50 backdrop-blur-xl rounded-3xl border border-zinc-800 overflow-hidden">
                 {/* Placeholder for profile image */}
-                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-500/10 to-teal-500/10">
+                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-pink-500/10 to-lime-500/10">
                   <div className="text-9xl">👩‍💻</div>
                 </div>
               </div>
@@ -84,9 +84,9 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                className="flex items-start gap-4 p-6 bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-zinc-800 hover:border-purple-500/50 transition-colors"
+                className="flex items-start gap-4 p-6 bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-zinc-800 hover:border-pink-500/50 transition-colors"
               >
-                  <div className="p-3 bg-gradient-to-br from-purple-500/20 to-teal-500/20 rounded-lg text-purple-400">
+                  <div className="p-3 bg-gradient-to-br from-pink-500/20 to-lime-500/20 rounded-lg text-pink-400">
                     {feature.icon}
                   </div>
                   <div>

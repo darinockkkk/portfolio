@@ -23,7 +23,7 @@ export default function Hero({ onOpenChat }) {
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
       {/* Animated Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-teal-500/10 animate-gradient" />
+      <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 via-transparent to-lime-500/10 animate-gradient" />
       
       {/* Floating Particles */}
       {mounted && (
@@ -35,8 +35,8 @@ export default function Hero({ onOpenChat }) {
             const randomTargetY = Math.random() * window.innerHeight;
             const size = Math.random() > 0.5 ? 'w-2 h-2' : 'w-1 h-1';
             const isPurple = Math.random() > 0.5;
-            const color = isPurple ? 'bg-purple-400' : 'bg-teal-400';
-            const shadowColor = isPurple ? 'shadow-purple-400/80' : 'shadow-teal-400/80';
+            const color = isPurple ? 'bg-pink-400' : 'bg-lime-400';
+            const shadowColor = isPurple ? 'shadow-pink-400/80' : 'shadow-lime-400/80';
             const delay = Math.random() * 3;
             
             return (
@@ -45,8 +45,8 @@ export default function Hero({ onOpenChat }) {
                 className={`absolute ${size} ${color} ${shadowColor} rounded-full`}
                 style={{
                   boxShadow: isPurple 
-                    ? '0 0 8px rgba(192, 132, 252, 0.8), 0 0 12px rgba(192, 132, 252, 0.4)'
-                    : '0 0 8px rgba(45, 212, 191, 0.8), 0 0 12px rgba(45, 212, 191, 0.4)'
+                    ? '0 0 8px rgba(236, 72, 153, 0.8), 0 0 12px rgba(236, 72, 153, 0.4)'
+                    : '0 0 8px rgba(132, 204, 22, 0.8), 0 0 12px rgba(132, 204, 22, 0.4)'
                 }}
                 initial={{
                   x: randomX,
@@ -120,7 +120,7 @@ export default function Hero({ onOpenChat }) {
               transition={{ duration: 0.8, delay: 0.1 }}
             >
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-                I'm <span className="bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
+                I'm <span className="bg-gradient-to-r from-pink-400 to-lime-400 bg-clip-text text-transparent">
                   {profileData.name.split(" ")[0]}
                 </span>
               </h1>
@@ -150,7 +150,7 @@ export default function Hero({ onOpenChat }) {
             >
               <button
                 onClick={() => scrollToSection("projects")}
-                className="group flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-teal-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                className="group flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-pink-500 to-lime-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-pink-500/50 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               >
                 View Projects
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
@@ -174,7 +174,7 @@ export default function Hero({ onOpenChat }) {
             >
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-zinc-400 hover:text-purple-400 transition-colors text-sm font-medium flex items-center gap-2"
+                className="text-zinc-400 hover:text-pink-400 transition-colors text-sm font-medium flex items-center gap-2"
               >
                 <Mail size={16} />
                 Get in touch
@@ -182,7 +182,7 @@ export default function Hero({ onOpenChat }) {
               <span className="w-1 h-1 bg-zinc-700 rounded-full" />
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-zinc-400 hover:text-teal-400 transition-colors text-sm font-medium"
+                className="text-zinc-400 hover:text-lime-400 transition-colors text-sm font-medium"
               >
                 Learn more about me
               </button>
@@ -211,7 +211,7 @@ export default function Hero({ onOpenChat }) {
             <span className="text-xs text-zinc-500 font-medium">Scroll to explore</span>
             <div className="w-6 h-10 border-2 border-zinc-700 rounded-full flex items-start justify-center p-2">
               <motion.div
-                className="w-1.5 h-1.5 bg-purple-400 rounded-full"
+                className="w-1.5 h-1.5 bg-pink-400 rounded-full"
                 animate={{ y: [0, 14, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />

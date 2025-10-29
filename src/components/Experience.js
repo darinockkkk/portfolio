@@ -11,7 +11,7 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="experience" className="py-32 relative">
+    <section id="experience" className="py-12 relative">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-20 xl:px-24" ref={ref}>
         {/* Section Title */}
         <motion.div
@@ -20,16 +20,16 @@ export default function Experience() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Experience
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-teal-500 mx-auto rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-2" />
         </motion.div>
 
         {/* Timeline */}
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 to-teal-500" />
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-pink-500 to-lime-500" />
 
           {/* Experience Cards */}
           <div className="space-y-12">
@@ -44,7 +44,7 @@ export default function Experience() {
                 }`}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-purple-500 rounded-full border-4 border-zinc-900 transform -translate-x-1/2 z-10" />
+                <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-pink-500 rounded-full border-4 border-zinc-900 transform -translate-x-1/2 z-10" />
 
                 {/* Card */}
                 <div
@@ -52,21 +52,21 @@ export default function Experience() {
                     index % 2 === 0 ? "md:mr-auto md:pr-12" : "md:ml-auto md:pl-12"
                   }`}
                 >
-                  <div className="group relative bg-zinc-900/50 backdrop-blur-xl rounded-2xl p-6 border border-zinc-800 hover:border-purple-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
+                  <div className="group relative bg-zinc-900/50 backdrop-blur-xl rounded-2xl p-6 border border-zinc-800 hover:border-pink-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/10">
                     {/* Glow Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-teal-500/0 group-hover:from-purple-500/5 group-hover:to-teal-500/5 rounded-2xl transition-all duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-pink-500/0 to-lime-500/0 group-hover:from-pink-500/5 group-hover:to-lime-500/5 rounded-2xl transition-all duration-300" />
 
                     <div className="relative z-10">
                       {/* Company Icon */}
                       <div className="flex items-center gap-3 mb-4">
-                        <div className="p-2 bg-gradient-to-br from-purple-500/20 to-teal-500/20 rounded-lg">
-                          <Briefcase className="w-5 h-5 text-purple-400" />
+                        <div className="p-2 bg-gradient-to-br from-pink-500/20 to-lime-500/20 rounded-lg">
+                          <Briefcase className="w-5 h-5 text-pink-400" />
                         </div>
                         <div>
                           <h3 className="text-xl font-bold text-zinc-100">
                             {exp.role}
                           </h3>
-                          <p className="text-purple-400 font-semibold">
+                          <p className="text-pink-400 font-semibold">
                             {exp.company}
                           </p>
                         </div>
@@ -88,7 +88,7 @@ export default function Experience() {
                         {exp.tech.map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className="px-5 py-2.5 text-xs font-medium bg-zinc-800/50 text-purple-300 rounded-lg border border-zinc-700"
+                            className="px-2.5 py-1 text-xs font-medium bg-zinc-800/50 text-pink-300 rounded-full border border-zinc-700"
                           >
                             {tech}
                           </span>

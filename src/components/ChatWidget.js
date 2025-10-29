@@ -92,7 +92,7 @@ const ChatWidget = forwardRef((props, ref) => {
         {!isOpen && (
           <motion.button
             onClick={() => setIsOpen(true)}
-            className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-purple-500 to-teal-500 text-white rounded-full shadow-lg hover:shadow-xl hover:shadow-purple-500/50 transition-shadow group"
+            className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-pink-500 to-lime-500 text-white rounded-full shadow-lg hover:shadow-xl hover:shadow-pink-500/50 transition-shadow group"
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             exit={{ scale: 0, rotate: 180 }}
@@ -121,10 +121,10 @@ const ChatWidget = forwardRef((props, ref) => {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-zinc-800 bg-gradient-to-r from-purple-500/10 to-teal-500/10">
+            <div className="flex items-center justify-between p-4 border-b border-zinc-800 bg-gradient-to-r from-pink-500/10 to-lime-500/10">
               <div className="flex items-center gap-3">
                 <div className="relative">
-                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-teal-500 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-lime-500 rounded-full flex items-center justify-center">
                     <Sparkles className="w-5 h-5 text-white" />
                   </div>
                   <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-zinc-900"></span>
@@ -157,7 +157,7 @@ const ChatWidget = forwardRef((props, ref) => {
                   <div
                     className={`max-w-[80%] p-3 rounded-2xl ${
                       message.role === "user"
-                        ? "bg-gradient-to-r from-purple-500 to-teal-500 text-white"
+                        ? "bg-gradient-to-r from-pink-500 to-lime-500 text-white"
                         : "bg-zinc-800 text-zinc-100"
                     }`}
                   >
@@ -201,13 +201,13 @@ const ChatWidget = forwardRef((props, ref) => {
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Ask about Daryna's experience..."
-                  className="flex-1 px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-xl text-zinc-100 placeholder-zinc-500 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all"
+                  className="flex-1 px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-xl text-zinc-100 placeholder-zinc-500 focus:border-pink-500 focus:outline-none focus:ring-2 focus:ring-pink-500/20 transition-all"
                   disabled={isLoading}
                 />
                 <button
                   onClick={handleSendMessage}
                   disabled={isLoading || !inputValue.trim()}
-                  className="p-2 bg-gradient-to-r from-purple-500 to-teal-500 text-white rounded-xl hover:shadow-lg hover:shadow-purple-500/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="p-2 bg-gradient-to-r from-pink-500 to-lime-500 text-white rounded-xl hover:shadow-lg hover:shadow-pink-500/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Send size={20} />
                 </button>

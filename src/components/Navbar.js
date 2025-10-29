@@ -58,7 +58,7 @@ export default function Navbar() {
     <>
       {/* Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-teal-500 z-50 origin-left"
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-pink-500 to-lime-500 z-50 origin-left"
         style={{
           scaleX: scrollProgress,
         }}
@@ -82,7 +82,7 @@ export default function Navbar() {
             {/* Logo */}
             <motion.button
               onClick={() => scrollToSection("hero")}
-              className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent"
+              className="text-2xl font-bold bg-gradient-to-r from-pink-400 to-lime-400 bg-clip-text text-transparent"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -97,7 +97,7 @@ export default function Navbar() {
                   onClick={() => scrollToSection(item.id)}
                   className={`relative text-sm font-medium transition-colors ${
                     activeSection === item.id
-                      ? "text-purple-400"
+                      ? "text-pink-400"
                       : "text-zinc-400 hover:text-zinc-100"
                   }`}
                 >
@@ -105,7 +105,7 @@ export default function Navbar() {
                   {activeSection === item.id && (
                     <motion.div
                       layoutId="activeSection"
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-500 to-teal-500"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-pink-500 to-lime-500"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -142,7 +142,7 @@ export default function Navbar() {
                     transition={{ delay: index * 0.1 }}
                     className={`block w-full text-left text-lg font-medium transition-colors ${
                       activeSection === item.id
-                        ? "text-purple-400"
+                        ? "text-pink-400"
                         : "text-zinc-400 hover:text-zinc-100"
                     }`}
                   >
