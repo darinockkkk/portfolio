@@ -50,7 +50,7 @@ export default function AIAvatar({ onOpenChat }) {
       {/* AI Avatar Card */}
       <motion.button
         onClick={onOpenChat}
-        className="group relative w-full bg-gradient-to-br from-pink-900/40 to-lime-900/40 backdrop-blur-xl rounded-3xl p-14 border-2 border-pink-500/20 hover:border-pink-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-pink-500/20 cursor-pointer"
+        className="group relative w-full bg-gradient-to-br from-pink-900/40 to-lime-900/40 backdrop-blur-xl rounded-3xl p-8 sm:p-10 lg:p-12 border-2 border-pink-500/20 hover:border-pink-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-pink-500/20 cursor-pointer"
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.98 }}
       >
@@ -71,7 +71,7 @@ export default function AIAvatar({ onOpenChat }) {
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center">
           {/* Avatar Container */}
-          <div className="relative w-36 h-36 mb-6">
+          <div className="relative w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36 mb-6">
             {/* Animated Ring */}
             <motion.div
               className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 to-lime-500 opacity-40"
@@ -92,7 +92,7 @@ export default function AIAvatar({ onOpenChat }) {
                 {/* AI Avatar - Blonde Girl with Green Eyes */}
                 <div className="relative w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-800 to-zinc-900">
                   {/* Simple Avatar Representation */}
-                  <div className="text-7xl">
+                  <div className="text-5xl sm:text-6xl lg:text-7xl">
                     <motion.span
                       animate={{
                         scale: [1, 1.05, 1],
@@ -125,9 +125,9 @@ export default function AIAvatar({ onOpenChat }) {
               <Sparkles className="w-7 h-7" />
             </motion.div>
 
-            {/* Waving Hand */}
+            {/* Robot Emoji */}
             <motion.div
-              className="absolute -bottom-1 -right-1 text-3xl drop-shadow-lg"
+              className="absolute -bottom-1 -right-1 text-2xl sm:text-2xl lg:text-3xl drop-shadow-lg"
               animate={{
                 rotate: [0, 14, -8, 14, -4, 10, 0],
               }}
@@ -137,20 +137,20 @@ export default function AIAvatar({ onOpenChat }) {
                 repeatDelay: 3,
               }}
             >
-              👋
+              🤖
             </motion.div>
           </div>
 
           {/* Text */}
-          <h3 className="text-2xl font-bold text-white mb-2 group-hover:bg-gradient-to-r group-hover:from-pink-400 group-hover:to-lime-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+          <h3 className="text-xl sm:text-xl lg:text-2xl font-bold text-white group-hover:bg-gradient-to-r group-hover:from-pink-400 group-hover:to-lime-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300" style={{ marginTop: '12px', marginBottom: '4px' }}>
             Chat with my AI Twin
           </h3>
-          <p className="text-sm text-zinc-400 text-center mb-6 font-medium">
+          <p className="text-xs sm:text-sm text-zinc-400 text-center font-medium" style={{ marginTop: '0', marginBottom: '12px' }}>
             Powered by AI • Always available
           </p>
 
           {/* CTA Button */}
-          <div className="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-pink-500 to-lime-500 text-white rounded-full text-base font-semibold group-hover:shadow-xl group-hover:shadow-pink-500/50 transition-all duration-300 group-hover:scale-105">
+          <div className="flex items-center gap-2 px-6 sm:px-7 lg:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-pink-500 to-lime-500 text-white rounded-full text-sm sm:text-base font-semibold group-hover:shadow-xl group-hover:shadow-pink-500/50 transition-all duration-300 group-hover:scale-105">
             <MessageCircle size={18} />
             <span>Start Chatting</span>
           </div>

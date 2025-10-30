@@ -29,11 +29,11 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-12 relative">
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-20 xl:px-24" ref={ref}>
+    <section id="about" className="py-12 2xl:py-16 relative">
+      <div className="max-w-[90%] lg:max-w-[85%] xl:max-w-[80%] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12" ref={ref}>
         {/* Section Title */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 2xl:mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -41,10 +41,10 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             About Me
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-2" />
+          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-4" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 2xl:gap-16 items-center">
           {/* Profile Image/Avatar */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -72,7 +72,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <p className="text-lg text-zinc-300 leading-relaxed mb-8 px-2">
+            <p className="text-lg text-zinc-300 leading-relaxed mb-8 px-2 text-justify">
               {profileData.about}
             </p>
 
@@ -93,7 +93,7 @@ export default function About() {
                     <h3 className="font-semibold text-zinc-100 mb-2">
                       {feature.title}
                     </h3>
-                    <p className="text-sm text-zinc-400 leading-relaxed">
+                    <p className="text-sm text-zinc-400 leading-relaxed text-justify">
                       {feature.description}
                     </p>
                   </div>

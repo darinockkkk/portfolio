@@ -22,8 +22,28 @@ const ChatWidget = forwardRef((props, ref) => {
   ]);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [highlightFirstMessage, setHighlightFirstMessage] = useState(false);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
+
+  // Show first message for 5 seconds, then hide for 10 seconds, repeat
+  useEffect(() => {
+    const showAndHide = () => {
+      // Show the message
+      setHighlightFirstMessage(true);
+      
+      // Hide after 5 seconds
+      setTimeout(() => {
+        setHighlightFirstMessage(false);
+        
+        // Show again after 10 more seconds
+        setTimeout(showAndHide, 10000);
+      }, 5000);
+    };
+
+    // Start the cycle
+    showAndHide();
+  }, []);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -148,18 +168,22 @@ const ChatWidget = forwardRef((props, ref) => {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  animate={{ 
+                    opacity: 1, 
+                    y: 0,
+                    scale: index === 0 && highlightFirstMessage ? [1, 1.05, 1] : 1
+                  }}
                   transition={{ duration: 0.3 }}
                   className={`flex ${
                     message.role === "user" ? "justify-end" : "justify-start"
                   }`}
                 >
                   <div
-                    className={`max-w-[80%] p-3 rounded-2xl ${
+                    className={`max-w-[80%] p-3 rounded-2xl transition-all duration-300 ${
                       message.role === "user"
                         ? "bg-gradient-to-r from-pink-500 to-lime-500 text-white"
                         : "bg-zinc-800 text-zinc-100"
-                    }`}
+                    } ${index === 0 && highlightFirstMessage ? 'ring-2 ring-pink-500 shadow-lg shadow-pink-500/50' : ''}`}
                   >
                     <p className="text-sm leading-relaxed">{message.content}</p>
                   </div>

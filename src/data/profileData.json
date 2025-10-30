@@ -2,13 +2,13 @@
   "name": "Daryna Darii",
   "title": "Software Developer & Product Analyst",
   "tagline": "Building intelligent, user-focused digital products.",
-  "email": "daryna@example.com",
+  "email": "darynadariy@gmail.com",
   "location": "Toronto, Canada",
   "about": "I'm a developer passionate about creating products that combine AI, design, and business logic. With experience in startups, SaaS, and mobile apps, I bring both technical execution and product strategy to every project.",
   "social": {
     "linkedin": "https://linkedin.com/in/daryna-darii",
     "github": "https://github.com/daryna-darii",
-    "email": "daryna@example.com"
+    "email": "darynadariy@gmail.com"
   },
   "experience": [
     {
@@ -39,7 +39,14 @@
       "description": "AI-powered networking platform that connects professionals based on interests and goals using intelligent matching algorithms.",
       "tech": ["React Native", "OpenAI API", "Node.js", "Firebase"],
       "image": "/projects/yeego.png",
-      "link": "#"
+      "link": "https://apps.apple.com/ca/app/yeego/id6745977331"
+    },
+    {
+      "name": "HODIMO",
+      "description": "Restaurant discovery app with smart filters, personalized recommendations, and exclusive discount rewards. Find dining spots by cuisine, vibe, and location.",
+      "tech": ["React Native", "AWS", "Python", "PostgreSQL"],
+      "image": "/projects/hodimo.png",
+      "link": "https://apps.apple.com/ca/app/hodimo/id6742421306"
     },
     {
       "name": "OutWithStrangers",
@@ -47,6 +54,13 @@
       "tech": ["Django", "Python", "PostgreSQL", "Bootstrap"],
       "image": "/projects/ows.png",
       "link": "#"
+    },
+    {
+      "name": "WhoRiddle",
+      "description": "Cross-platform riddle game with competitive leaderboards and reward system. Available on Google Play and App Store.",
+      "tech": ["React Native", "Firebase", "Expo", "Redux"],
+      "image": "/projects/whoriddle.png",
+      "link": "https://apps.apple.com/ca/app/whoriddle/id1638671136"
     },
     {
       "name": "FinanceBro",

@@ -63,25 +63,25 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-12 relative">
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-20 xl:px-24" ref={ref}>
+    <section id="contact" className="py-12 2xl:py-16 relative">
+      <div className="max-w-[90%] lg:max-w-[85%] xl:max-w-[75%] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12" ref={ref}>
         {/* Section Title */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 2xl:mb-16 w-full"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white text-center">
             Let's Connect
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-2 mb-4" />
-          <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-4 mb-4" />
+          <p className="text-zinc-400 text-lg text-center">
             Have a project in mind or want to chat? I'd love to hear from you!
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 2xl:gap-16 items-start">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -212,11 +212,24 @@ export default function Contact() {
             </div>
 
             {/* Social Links */}
-            <div className="bg-zinc-900/50 backdrop-blur-xl rounded-2xl p-8 border border-zinc-800">
-              <h3 className="text-2xl font-bold text-zinc-100 mb-6">
+            <div className="bg-zinc-900/50 backdrop-blur-xl rounded-2xl p-8 border border-zinc-800 relative">
+              <motion.span
+                className="absolute -top-6 -right-6 text-5xl"
+                animate={{
+                  rotate: [0, 14, -8, 14, -4, 10, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatDelay: 3,
+                }}
+              >
+                🤝
+              </motion.span>
+              <h3 className="text-2xl font-bold text-zinc-100 mb-8">
                 Connect With Me
               </h3>
-              <div className="flex gap-4">
+              <div className="flex gap-4 mt-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={index}

@@ -39,8 +39,7 @@ export default function Home() {
       <footer className="py-8 border-t border-zinc-800">
         <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-20 xl:px-24 text-center">
           <p className="text-zinc-400 text-sm">
-            © {new Date().getFullYear()} Daryna Darii. Built with Next.js,
-            TailwindCSS & Framer Motion.
+            © {new Date().getFullYear()} Daryna Darii.
           </p>
         </div>
       </footer>

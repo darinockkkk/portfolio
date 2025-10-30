@@ -32,7 +32,7 @@ export default function Experience() {
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-pink-500 to-lime-500" />
 
           {/* Experience Cards */}
-          <div className="space-y-12">
+          <div className="space-y-0">
             {profileData.experience.map((exp, index) => (
               <motion.div
                 key={index}
@@ -41,7 +41,7 @@ export default function Experience() {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className={`relative flex items-center ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
+                } ${index > 0 ? "mt-6 md:-mt-24" : ""}`}
               >
                 {/* Timeline Dot */}
                 <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-pink-500 rounded-full border-4 border-zinc-900 transform -translate-x-1/2 z-10" />
@@ -79,12 +79,12 @@ export default function Experience() {
                       </div>
 
                       {/* Description */}
-                      <p className="text-zinc-300 mb-4 leading-relaxed">
+                      <p className="text-zinc-300 mb-4 leading-relaxed text-justify">
                         {exp.description}
                       </p>
 
                       {/* Tech Stack */}
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 mt-4">
                         {exp.tech.map((tech, techIndex) => (
                           <span
                             key={techIndex}

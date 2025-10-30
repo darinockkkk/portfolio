@@ -20,24 +20,27 @@ export default function Hero({ onOpenChat }) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      className="relative min-h-[600px] lg:min-h-[700px] flex items-center justify-center overflow-hidden pt-20 pb-16"
     >
       {/* Animated Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 via-transparent to-lime-500/10 animate-gradient" />
       
       {/* Floating Particles */}
       {mounted && (
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(25)].map((_, i) => {
-            const randomX = Math.random() * window.innerWidth;
-            const randomY = Math.random() * window.innerHeight;
-            const randomTargetX = Math.random() * window.innerWidth;
-            const randomTargetY = Math.random() * window.innerHeight;
-            const size = Math.random() > 0.5 ? 'w-2 h-2' : 'w-1 h-1';
-            const isPurple = Math.random() > 0.5;
-            const color = isPurple ? 'bg-pink-400' : 'bg-lime-400';
-            const shadowColor = isPurple ? 'shadow-pink-400/80' : 'shadow-lime-400/80';
-            const delay = Math.random() * 3;
+        <div className="absolute inset-0 overflow-hidden pointer-events-none flex items-center justify-center">
+          <div className="relative w-[90%] lg:w-[85%] xl:w-[80%] h-full">
+            {[...Array(25)].map((_, i) => {
+              const containerWidth = 1400; // max-w-7xl approximate width
+              const containerHeight = 800; // approximate content height
+              const randomX = Math.random() * containerWidth;
+              const randomY = Math.random() * containerHeight;
+              const randomTargetX = Math.random() * containerWidth;
+              const randomTargetY = Math.random() * containerHeight;
+              const size = Math.random() > 0.5 ? 'w-2 h-2' : 'w-1 h-1';
+              const isPurple = Math.random() > 0.5;
+              const color = isPurple ? 'bg-pink-400' : 'bg-lime-400';
+              const shadowColor = isPurple ? 'shadow-pink-400/80' : 'shadow-lime-400/80';
+              const delay = Math.random() * 3;
             
             return (
               <motion.div
@@ -86,12 +89,14 @@ export default function Hero({ onOpenChat }) {
               />
             );
           })}
+          </div>
         </div>
       )}
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 sm:px-12 lg:px-20 xl:px-24">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center min-h-[calc(100vh-8rem)]">
+      <div className="relative z-10 w-full mx-auto">
+        <div className="max-w-[90%] lg:max-w-[85%] xl:max-w-[80%] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+          <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-16 xl:gap-20 2xl:gap-24 items-center py-8 lg:py-12">
           
           {/* Left Side - Main Content */}
           <div className="flex flex-col justify-center space-y-10 text-center lg:text-left">
@@ -133,7 +138,7 @@ export default function Hero({ onOpenChat }) {
 
             {/* Tagline */}
             <motion.p
-              className="text-lg sm:text-xl text-zinc-400 max-w-xl mx-auto lg:mx-0 leading-relaxed py-2"
+              className="text-lg sm:text-xl text-zinc-400 max-w-xl mx-auto lg:mx-0 leading-relaxed py-2 text-justify"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -191,33 +196,34 @@ export default function Hero({ onOpenChat }) {
 
           {/* Right Side - AI Avatar */}
           <motion.div
-            className="flex justify-center lg:justify-end items-center"
+            className="flex justify-center lg:justify-end items-center max-w-md lg:max-w-sm xl:max-w-md mx-auto lg:mx-0"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <AIAvatar onOpenChat={onOpenChat} />
           </motion.div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:block"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [0.3, 1, 0.3] }}
-          transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-        >
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-xs text-zinc-500 font-medium">Scroll to explore</span>
-            <div className="w-6 h-10 border-2 border-zinc-700 rounded-full flex items-start justify-center p-2">
-              <motion.div
-                className="w-1.5 h-1.5 bg-pink-400 rounded-full"
-                animate={{ y: [0, 14, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-            </div>
           </div>
-        </motion.div>
+
+          {/* Scroll Indicator */}
+          <motion.div
+            className="absolute bottom-0 left-1/2 transform -translate-x-1/2 hidden lg:block"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: [0.3, 1, 0.3] }}
+            transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+          >
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-xs text-zinc-500 font-medium">Scroll to explore</span>
+              <div className="w-6 h-10 border-2 border-zinc-700 rounded-full flex items-start justify-center p-2">
+                <motion.div
+                  className="w-1.5 h-1.5 bg-pink-400 rounded-full"
+                  animate={{ y: [0, 14, 0] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

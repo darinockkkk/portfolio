@@ -50,11 +50,11 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-12 relative">
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-20 xl:px-24" ref={ref}>
+    <section id="skills" className="py-12 2xl:py-16 relative">
+      <div className="max-w-[90%] lg:max-w-[85%] xl:max-w-[80%] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12" ref={ref}>
         {/* Section Title */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 2xl:mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -62,11 +62,11 @@ export default function Skills() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Skills & Technologies
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-2" />
+          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-4" />
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 2xl:gap-10">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
