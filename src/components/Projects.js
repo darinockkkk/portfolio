@@ -73,7 +73,7 @@ export default function Projects() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Featured Projects
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-4" />
+          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-4 mb-4" />
           
           {/* Swipe Indicator */}
           <motion.div
@@ -140,7 +140,7 @@ export default function Projects() {
               <div className="relative h-48 2xl:h-56 bg-gradient-to-br from-pink-500/20 to-lime-500/20 overflow-hidden">
                 {/* Placeholder for project image */}
                 <div className="w-full h-full flex items-center justify-center text-6xl 2xl:text-7xl">
-                  {["🤝", "✅", "🎉", "💪", "💰"][index] || "🚀"}
+                  {["🤝", "🍽️", "🎉", "💪", "💰"][index] || "🚀"}
                 </div>
                 
                 {/* Overlay on hover - hide for FinanceBro and OutWithStrangers */}

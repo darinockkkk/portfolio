@@ -17,6 +17,17 @@ export default function Hero({ onOpenChat }) {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollToSectionWithOffset = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       id="hero"
@@ -162,7 +173,7 @@ export default function Hero({ onOpenChat }) {
               </button>
 
               <button
-                onClick={() => window.open("#", "_blank")}
+                onClick={() => window.open("/CV-Daryna-Darii-2025.pdf", "_blank")}
                 className="flex items-center justify-center gap-2 px-8 py-4 bg-zinc-800/80 backdrop-blur-sm text-white rounded-full font-semibold hover:bg-zinc-700 transition-all duration-300 hover:scale-105 border border-zinc-700 hover:border-zinc-600 w-full sm:w-auto"
               >
                 <Download size={18} />
@@ -186,7 +197,7 @@ export default function Hero({ onOpenChat }) {
               </button>
               <span className="w-1 h-1 bg-zinc-700 rounded-full" />
               <button
-                onClick={() => scrollToSection("about")}
+                onClick={() => scrollToSectionWithOffset("about")}
                 className="text-zinc-400 hover:text-lime-400 transition-colors text-sm font-medium"
               >
                 Learn more about me

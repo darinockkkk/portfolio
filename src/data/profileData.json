@@ -1,6 +1,6 @@
 {
   "name": "Daryna Darii",
-  "title": "Software Developer & Product Analyst",
+  "title": "Software Engineer & Product Analyst",
   "tagline": "Building intelligent, user-focused digital products.",
   "email": "darynadariy@gmail.com",
   "location": "Toronto, Canada",
@@ -71,12 +71,12 @@
     }
   ],
   "skills": {
-    "languages": ["JavaScript/TypeScript", "Python", "Java", "SQL", "C"],
-    "frameworks": ["React Native", "Node.js", "Django", "Expo", "Next.js"],
-    "databases": ["Firebase", "PostgreSQL", "MySQL", "MongoDB"],
-    "cloud": ["AWS", "GCP", "Azure"],
-    "tools": ["Figma", "Git", "Docker", "CI/CD"],
-    "ai": ["Scikit-learn", "OpenAI API", "TensorFlow", "ML Pipelines"]
+    "languages": ["JavaScript/TypeScript", "Python", "Java", "SQL", "C/C++", "HTML/CSS"],
+    "frameworks": ["React Native", "Next.js", "Node.js", "Django", "Expo", "Bootstrap", "JavaFX"],
+    "databases": ["PostgreSQL", "MySQL", "MongoDB", "Firebase"],
+    "cloud": ["AWS", "GCP", "Azure", "Docker", "CI/CD"],
+    "tools": ["Figma", "Adobe XD", "Miro", "Git", "Postman", "Jira"],
+    "ai": ["Scikit-learn", "OpenAI API", "ML Pipelines", "Pandas", "NumPy", "Matplotlib"] 
   }
 }
 

@@ -62,7 +62,7 @@ export default function Skills() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Skills & Technologies
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-4" />
+          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-4 mb-4" />
         </motion.div>
 
         {/* Skills Grid */}

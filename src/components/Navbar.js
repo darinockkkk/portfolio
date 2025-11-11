@@ -1,8 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { Rock_Salt } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+
+const rockSalt = Rock_Salt({ subsets: ["latin"], weight: "400" });
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,10 +15,11 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", id: "hero" },
-    { name: "About", id: "about" },
+    { name: "Why Me", id: "differentiators" },
     { name: "Experience", id: "experience" },
     { name: "Projects", id: "projects" },
     { name: "Skills", id: "skills" },
+    { name: "About", id: "about" },
     { name: "Contact", id: "contact" },
   ];
 
@@ -23,34 +27,54 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // Update scroll progress
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrolled = window.scrollY;
       setScrollProgress(scrollHeight > 0 ? scrolled / scrollHeight : 0);
 
-      // Update active section based on scroll position
       const sections = navItems.map((item) => item.id);
-      const currentSection = sections.find((section) => {
+      let currentSection = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
+          return rect.top <= 120 && rect.bottom >= 120;
         }
         return false;
       });
 
-      if (currentSection) {
+      if (!currentSection) {
+        const pastSections = sections.filter((section) => {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top <= 120;
+          }
+          return false;
+        });
+        if (pastSections.length > 0) {
+          currentSection = pastSections[pastSections.length - 1];
+        }
+      }
+
+      if (currentSection && currentSection !== activeSection) {
         setActiveSection(currentSection);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [navItems, activeSection]);
 
   const scrollToSection = (id) => {
+    setActiveSection(id);
     const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (element) {
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -82,7 +106,7 @@ export default function Navbar() {
             {/* Logo */}
             <motion.button
               onClick={() => scrollToSection("hero")}
-              className="text-2xl font-bold bg-gradient-to-r from-pink-400 to-lime-400 bg-clip-text text-transparent"
+              className={`${rockSalt.className} text-[2rem] leading-tight bg-gradient-to-r from-pink-400 to-lime-400 bg-clip-text text-transparent tracking-tight px-1`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

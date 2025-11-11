@@ -38,30 +38,39 @@ export default function About() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
             About Me
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-4" />
+          <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-lime-500 mx-auto rounded-full mt-4 mb-4" />
+          <motion.p
+            className="mt-6 text-zinc-400 text-lg md:text-xl text-center flex justify-center"
+            initial={{ opacity: 0, y: 12 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            I bridge design, business, and technology to build products that feel thoughtful—not just functional.
+          </motion.p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 2xl:gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-12 xl:gap-14 items-start mx-auto max-w-5xl">
           {/* Profile Image/Avatar */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
+            className="relative flex md:h-full justify-center"
           >
-            <div className="relative w-full aspect-square max-w-md mx-auto">
+            <div className="relative w-full max-w-[320px] md:h-full">
               {/* Glowing Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-lime-500/20 rounded-3xl blur-3xl" />
-              
+
               {/* Avatar Card */}
-              <div className="relative w-full h-full bg-zinc-900/50 backdrop-blur-xl rounded-3xl border border-zinc-800 overflow-hidden">
-                {/* Placeholder for profile image */}
-                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-pink-500/10 to-lime-500/10">
-                  <div className="text-9xl">👩‍💻</div>
-                </div>
+              <div className="relative w-full h-full min-h-[280px] bg-zinc-900/50 backdrop-blur-xl rounded-3xl border border-zinc-800 overflow-hidden">
+                <img
+                  src="/about.jpg"
+                  alt="Daryna Darii portrait"
+                  className="w-full h-full object-cover object-[50%_35%]"
+                />
               </div>
             </div>
           </motion.div>
@@ -72,28 +81,23 @@ export default function About() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <p className="text-lg text-zinc-300 leading-relaxed mb-8 px-2 text-justify">
-              {profileData.about}
-            </p>
-
-            {/* Feature Cards */}
-            <div className="space-y-4">
+            <div className="space-y-3">
               {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                className="flex items-start gap-4 p-6 bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-zinc-800 hover:border-pink-500/50 transition-colors"
-              >
-                  <div className="p-3 bg-gradient-to-br from-pink-500/20 to-lime-500/20 rounded-lg text-pink-400">
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: 0.6 + index * 0.08 }}
+                  className="flex items-start gap-3 bg-zinc-900/40 border border-zinc-800 rounded-2xl px-5 py-4 hover:border-pink-500/40 transition-colors"
+                >
+                  <div className="p-3 bg-gradient-to-br from-pink-500/20 to-lime-500/20 rounded-xl text-pink-400">
                     {feature.icon}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-zinc-100 mb-2">
+                    <h3 className="text-base md:text-lg font-semibold text-white mb-1">
                       {feature.title}
                     </h3>
-                    <p className="text-sm text-zinc-400 leading-relaxed text-justify">
+                    <p className="text-sm md:text-base text-zinc-300 leading-relaxed">
                       {feature.description}
                     </p>
                   </div>

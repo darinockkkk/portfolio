@@ -48,12 +48,12 @@ export default function Contact() {
       url: profileData.social.linkedin,
       color: "hover:text-blue-400",
     },
-    {
-      name: "GitHub",
-      icon: <Github className="w-6 h-6" />,
-      url: profileData.social.github,
-      color: "hover:text-pink-400",
-    },
+    // {
+    //   name: "GitHub",
+    //   icon: <Github className="w-6 h-6" />,
+    //   url: profileData.social.github,
+    //   color: "hover:text-pink-400",
+    // },
     {
       name: "Email",
       icon: <Mail className="w-6 h-6" />,
