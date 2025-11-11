@@ -75,7 +75,7 @@
     "frameworks": ["React Native", "Next.js", "Node.js", "Django", "Expo", "Bootstrap", "JavaFX"],
     "databases": ["PostgreSQL", "MySQL", "MongoDB", "Firebase"],
     "cloud": ["AWS", "GCP", "Azure", "Docker", "CI/CD"],
-    "tools": ["Figma", "Adobe XD", "Miro", "Git", "Postman", "Jira"],
+    "tools": ["Figma", "Git", "Postman", "Jira", "Jest", "Cypress", "QA & Usability Testing"],
     "ai": ["Scikit-learn", "OpenAI API", "ML Pipelines", "Pandas", "NumPy", "Matplotlib"] 
   }
 }
